@@ -13,7 +13,7 @@ This code provides modules for **FDI calculation, dispersed regions identificati
 
 ## Overview of FDI model
 <p align="center">
-  <img src="/FDI/fig/Figure 1_00.png" width="100%"/> 
+  <img src="/FDI/fig/Figure1.png" width="100%"/> 
 </p>
 
 
