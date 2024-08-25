@@ -44,7 +44,7 @@ wget -c https://zenodo.org/record/3928546/files/GC.zip
 ```
 wget -c https://zenodo.org/record/3928546/files/mappability.zip
 ```
-Then, unzip them
+Then, unzip them.
 ```
 unzip GC.zip
 ```
@@ -70,7 +70,7 @@ Calling this function in MATLAB.
 user_identify_dispersedregions(bed_folder,mat_path,distribution,P,FDR,res_path,X,Y,chr_n,numWorkers)
 ```
 The *parameters* to be passed to the function user_identify_dispersedregions are as follows:
-The contains the name of the *parameter: bed_folder,mat_path,distribution,P,FDR,res_path,X,Y,chr_n,numWorkers*, an example of the parameter and the comment on the parameter.
+The contains the name of the **parameter: bed_folder,mat_path,distribution,P,FDR,res_path,X,Y,chr_n,numWorkers**, an example of the parameter and the comment on the parameter.
 ```
 bed_folder = '/FDI/Dispersed_region_identify/bed_folder/';%This folder contains the .bed files.
 
@@ -97,7 +97,12 @@ numWorkers = 2;%The number of cores used in parallel is recommended to be no hig
 Each completed chromosome returns the prompt: current chromosome completed.
 When it finishes running, it generates a folder named bed_name in res_path, where the results are stored.
 
-## Results for identifying dispersed regions
+**Results for identifying dispersed regions.**
 <p align="center">
   <img src="/FDI/fig/Example_tssctcf.png" width="100%"/> 
 </p>
+
+
+## 4 diagnostic
+### 2.1 Pre-training dataset
+You need to create a folder to store some .bed files. These store cfDNA fragment information and require the first column to be the chromosome number, the second to be the fragment start point, the third to be the end point, the fourth to be the type, and the fifth to be the quality. Only fragments with a quality greater than 30 will be kept.
