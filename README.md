@@ -33,7 +33,6 @@ Then, get the code.
 git clone --recursive https://github.com/alcindor819/FDI_code_MATLAB.git
 ```
 
-
 ## 2 Preparation
 
 ```
@@ -86,9 +85,9 @@ You can choose numWorkers according to the performance of your computer, the hig
 ```
 numWorkers = 2;%A sample could be this
 ```
+After the code finishes, you'll get the mat format data for all the samples in the res_folder.
 
 ## 4 Identifying
-
 
 You Need to call the function user_identify_dispersedregions.m.
 ```
@@ -130,7 +129,6 @@ When it finishes running, it generates a folder named bed_name in res_path, wher
 <p align="center">
   <img src="/FDI/fig/Example_tssctcf.png" width="100%"/> 
 </p>
-
 
 ## 5 diagnostic
 ### 5.1 
