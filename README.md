@@ -104,5 +104,4 @@ When it finishes running, it generates a folder named bed_name in res_path, wher
 
 
 ## 4 diagnostic
-### 2.1 Pre-training dataset
-You need to create a folder to store some .bed files. These store cfDNA fragment information and require the first column to be the chromosome number, the second to be the fragment start point, the third to be the end point, the fourth to be the type, and the fifth to be the quality. Only fragments with a quality greater than 30 will be kept.
+### 4.1 
