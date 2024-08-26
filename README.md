@@ -20,6 +20,7 @@ This code provides modules for **FDI calculation, dispersed regions identificati
 ## Table of Contents
  - [Environment](#Environment)
  - [Preparation work](#Preparation)
+ - [Data preprocessing](#Datapreprocessing)
  - [Identifying dispersed regions](#Identifying)
  - [Diagnostic](#Diagnostic)
  - [Citation](#citation)
@@ -57,8 +58,11 @@ wget -c BH01.bed
 ```
 There is a sample bed file in /FDI/Basic_info//Dispersed_region_identify/bed_folder/ .
 
+## 3 Preparation
 
-## 3 Identifying
+
+
+## 4 Identifying
 
 
 You Need to call the function user_identify_dispersedregions.m.
@@ -103,5 +107,5 @@ When it finishes running, it generates a folder named bed_name in res_path, wher
 </p>
 
 
-## 4 diagnostic
-### 4.1 
+## 5 diagnostic
+### 5.1 
