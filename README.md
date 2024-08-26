@@ -22,7 +22,7 @@ This code provides modules for **FDI calculation, dispersed regions identificati
  - [Data preprocessing](#Data_preprocessing)
  - [Identifying dispersed regions](#Identifying_dispersed_regions)
  - [Diagnostic](#Diagnostic)
- - [Citation](#citation)
+ - [Citation](#Citation)
 
 <a name="Environment"></a>
 ## 1 Environment
@@ -133,8 +133,8 @@ When it finishes running, it generates a folder named bed_name in res_path, wher
   <img src="/FDI/fig/Example_tssctcf.png" width="100%"/> 
 </p>
 
-<a name="diagnostic"></a>
-## 5 diagnostic
+<a name="Diagnostic"></a>
+## 5 Diagnostic
 
 ### 5.1 cross-validation
 First cd to the folder \FDI\Diagnostic\K-fold_cross-validation\
@@ -188,4 +188,16 @@ gp = 0.05;%A parameter of FDI with a value in the range [0.0001,0.05]
 fdr = 0.2%A parameter of FDI with a value in the range [0.5,0.2]
 ```
 At the end of the programme, you get the results including AUC and ROC curves.
+
+<a name="Citation"></a>
+## Cite Us
+Feel free to cite this work if you find it useful to you!
+```
+@article{FDI,
+    title={Fragment Dispersity Index: A cfDNA fragmentation pattern precise describing chromatin accessibility and its application in early cancer detection},
+    author={Yunze Wang, ..., Wen Zhang, and Xionghui Zhou},
+    year={2024},
+}
+```
+
 
