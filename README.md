@@ -55,7 +55,7 @@ cd FDI_code_MATLAB/FDI/Basic_info//Dispersed_region_identify/bed_folder/
 wget -c BH01.bed
 ```
 There is a sample bed file in /FDI/Basic_info//Dispersed_region_identify/bed_folder/ .
-
+<a name="Data_preprocessing"></a>
 ## 3 Data_preprocessing
 You need to convert all the bed files you want to use into mat files that can be used directly by the code.
 First, cd to the Data Preprocessing folder.
