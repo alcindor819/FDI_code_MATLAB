@@ -16,12 +16,11 @@ This code provides modules for **FDI calculation, dispersed regions identificati
   <img src="/FDI/fig/Figure1.png" width="100%"/> 
 </p>
 
-
 ## Table of Contents
  - [Environment](#Environment)
  - [Preparation work](#Preparation)
  - [Data preprocessing](#Data_preprocessing)
- - [Identifying dispersed regions](#Identifying)
+ - [Identifying dispersed regions](#Identifying_dispersed_regions)
  - [Diagnostic](#Diagnostic)
  - [Citation](#citation)
 
