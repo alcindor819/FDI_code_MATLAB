@@ -20,7 +20,7 @@ This code provides modules for **FDI calculation, dispersed regions identificati
 ## Table of Contents
  - [Environment](#Environment)
  - [Preparation work](#Preparation)
- - [Data preprocessing](#Datapreprocessing)
+ - [Data preprocessing](#Data_preprocessing)
  - [Identifying dispersed regions](#Identifying)
  - [Diagnostic](#Diagnostic)
  - [Citation](#citation)
@@ -58,8 +58,9 @@ wget -c BH01.bed
 ```
 There is a sample bed file in /FDI/Basic_info//Dispersed_region_identify/bed_folder/ .
 
-## 3 Preparation
-
+## 3 Data_preprocessing
+You need to convert all the bed files you want to use into mat files that can be used directly by the code.
+First, cd to the Data Preprocessing folder
 
 
 ## 4 Identifying
