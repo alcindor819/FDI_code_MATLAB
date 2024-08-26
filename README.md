@@ -65,7 +65,7 @@ First, cd to the Data Preprocessing folder.
 ```
 cd FDI\Data preprocessing
 ```
-Calling the user_processing function.m .
+Calling the **user_processing function.m** .
 ```
 user_processing(bed_info_path,bed_folder,numWorkers,res_folder,name_col)
 ```
@@ -73,7 +73,7 @@ You need an xlsx file with all the sample information, including sample names, p
 You should give the position of the column with the sample name in the xlsx file.
 ```
 bed_info_path = '\FDI\bed\Cristiano_dataset_ID.xlsx';%A sample could be this
-name_col = 1;
+name_col = 1;%The column stores the sample name.
 ```
 You need a folder dedicated to the bed files.
 ```
@@ -92,11 +92,11 @@ After the code finishes, you'll get the mat format data for all the samples in t
 <a name="Identifying_dispersed_regions"></a>
 ## 4 Identifying_dispersed_regions
 
-You Need to call the function user_identify_dispersedregions.m.
+You Need to call the function **user_identify_dispersedregions.m** .
 ```
 cd /FDI/Dispersed_region_identify/
 ```
-Calling this function in MATLAB.
+Calling user_identify_dispersedregions function in MATLAB.
 ```
 user_identify_dispersedregions(bed_folder,mat_path,distribution,P,FDR,res_path,X,Y,chr_n,numWorkers)
 ```
@@ -135,4 +135,57 @@ When it finishes running, it generates a folder named bed_name in res_path, wher
 
 <a name="diagnostic"></a>
 ## 5 diagnostic
-### 5.1 
+
+### 5.1 cross-validation
+First cd to the folder \FDI\Diagnostic\K-fold_cross-validation\
+```
+cd '\FDI\Diagnostic\K-fold_cross-validation';
+```
+Then call the function **user_classify_Kfold.m**;
+```
+user_classify_Kfold(sample_info_path,name_col,pos_neg_col,fold,mat_folder,X,Y,readlen,buchang,gp,fdr)
+```
+Explanation of the parameters.
+```
+sample_info_path = '\FDI\bed\Cristiano_dataset_ID.xlsx';%A sample could be this
+name_col = 1;%The column stores the sample name
+pos_neg_col = 5;The column with the sample labels.
+fold = 10;k in k-fold cross-validation
+mat_folder = '\FDI\mat\';%Folder where processed mat data is stored
+X = 0.5;%A parameter of FDI with a value in the range (0,1)
+Y = 10;%A parameter of FDI with a value in the range [10,100]
+readlen = 200;%A parameter of FDI with a value in the range [120,500]
+buchang = 20;%A parameter of FDI with a value in the range [20,100]
+gp = 0.01;%A parameter of FDI with a value in the range [0.0001,0.05]
+fdr = 0.05%A parameter of FDI with a value in the range [0.5,0.2]
+```
+At the end of the programme, you get the folders and full results, including AUC and ROC curves.
+
+### 5.2 Independent_validation
+First cd to the folder \FDI\Diagnostic\Independent_validation\
+```
+cd '\FDI\Diagnostic\Independent_validation';
+```
+Then call the function **user_classify_independent.m**;
+```
+user_classify_independent(train_sample_info_path,train_name_col,train_pos_neg_col,fold,train_mat_folder,X,Y,readlen,buchang,gp,fdr,val_sample_info_path,val_mat_folder,val_name_col,val_pos_neg_col)
+```
+Explanation of the parameters.
+```
+train_sample_info_path = '\FDI\bed\Cristiano_dataset_ID.xlsx';%A sample could be this, sample information for the train dataset
+val_sample_info_path = '\FDI\bed\CRM_info.xlsx';%Sample information for the independent validation dataset
+train_name_col = 1;%The column stores the sample name
+val_name_col = 1;%The column stores the sample name
+train_pos_neg_col = 5;The column with the sample labels.
+val_pos_neg_col = 4;The column with the sample labels.
+train_mat_folder = '\FDI\mat\';%Folder where processed mat data is stored
+val_mat_folder = '\FDI\mat\';%Folder where processed mat data is stored
+X = 0.5;%A parameter of FDI with a value in the range (0,1)
+Y = 10;%A parameter of FDI with a value in the range [10,100]
+readlen = 200;%A parameter of FDI with a value in the range [120,500]
+buchang = 20;%A parameter of FDI with a value in the range [20,100]
+gp = 0.05;%A parameter of FDI with a value in the range [0.0001,0.05]
+fdr = 0.2%A parameter of FDI with a value in the range [0.5,0.2]
+```
+At the end of the programme, you get the results including AUC and ROC curves.
+
