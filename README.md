@@ -60,8 +60,32 @@ There is a sample bed file in /FDI/Basic_info//Dispersed_region_identify/bed_fol
 
 ## 3 Data_preprocessing
 You need to convert all the bed files you want to use into mat files that can be used directly by the code.
-First, cd to the Data Preprocessing folder
-
+First, cd to the Data Preprocessing folder.
+```
+cd FDI\Data preprocessing
+```
+Calling the user_processing function.m .
+```
+user_processing(bed_info_path,bed_folder,numWorkers,res_folder,name_col)
+```
+You need an xlsx file with all the sample information, including sample names, positive and negative labels of the samples.
+You should give the position of the column with the sample name in the xlsx file.
+```
+bed_info_path = '\FDI\bed\Cristiano_dataset_ID.xlsx';%A sample could be this
+name_col = 1;
+```
+You need a folder dedicated to the bed files.
+```
+bed_folder = '\FDI\bed\';%A sample could be this
+```
+You will need a folder dedicated to the generated mat files
+```
+res_folder = '\FDI\mat\';%A sample could be this
+```
+You can choose numWorkers according to the performance of your computer, the higher its value the more parallel resources, the faster it runs.
+```
+numWorkers = 2;%A sample could be this
+```
 
 ## 4 Identifying
 
