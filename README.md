@@ -86,7 +86,7 @@ numWorkers = 2;%A sample could be this
 ```
 After the code finishes, you'll get the mat format data for all the samples in the res_folder.
 
-## 4 Identifying
+## 4 Identifying_dispersed_regions
 
 You Need to call the function user_identify_dispersedregions.m.
 ```
@@ -96,7 +96,7 @@ Calling this function in MATLAB.
 ```
 user_identify_dispersedregions(bed_folder,mat_path,distribution,P,FDR,res_path,X,Y,chr_n,numWorkers)
 ```
-The *parameters* to be passed to the function user_identify_dispersedregions are as follows:
+The **parameters** to be passed to the function user_identify_dispersedregions are as follows:
 The contains the name of the **parameter: bed_folder,mat_path,distribution,P,FDR,res_path,X,Y,chr_n,numWorkers**, an example of the parameter and the comment on the parameter.
 ```
 bed_folder = '/FDI/Dispersed_region_identify/bed_folder/';%This folder contains the .bed files.
