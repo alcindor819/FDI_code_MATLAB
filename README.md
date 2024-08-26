@@ -24,6 +24,7 @@ This code provides modules for **FDI calculation, dispersed regions identificati
  - [Diagnostic](#Diagnostic)
  - [Citation](#citation)
 
+<a name="Environment"></a>
 ## 1 Environment
 
 First, Please install MATLAB
@@ -32,6 +33,7 @@ Then, get the code.
 git clone --recursive https://github.com/alcindor819/FDI_code_MATLAB.git
 ```
 
+<a name="Preparation"></a>
 ## 2 Preparation
 
 ```
@@ -54,7 +56,8 @@ unzip mappability.zip
 cd FDI_code_MATLAB/FDI/Basic_info//Dispersed_region_identify/bed_folder/
 wget -c BH01.bed
 ```
-There is a sample bed file in /FDI/Basic_info//Dispersed_region_identify/bed_folder/ .
+There is a sample bed file in /FDI/Basic_info/Dispersed_region_identify/bed_folder/ .
+
 <a name="Data_preprocessing"></a>
 ## 3 Data_preprocessing
 You need to convert all the bed files you want to use into mat files that can be used directly by the code.
@@ -86,6 +89,7 @@ numWorkers = 2;%A sample could be this
 ```
 After the code finishes, you'll get the mat format data for all the samples in the res_folder.
 
+<a name="Identifying_dispersed_regions"></a>
 ## 4 Identifying_dispersed_regions
 
 You Need to call the function user_identify_dispersedregions.m.
@@ -129,5 +133,6 @@ When it finishes running, it generates a folder named bed_name in res_path, wher
   <img src="/FDI/fig/Example_tssctcf.png" width="100%"/> 
 </p>
 
+<a name="diagnostic"></a>
 ## 5 diagnostic
 ### 5.1 
